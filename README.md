@@ -25,9 +25,11 @@ Seu desafio é criar um aplicativo Web que tenha **integração entre Electron e
 Você pode armazenar os dados localmente de qualquer forma. Nosso único pedido é que utilize esse modelo abaixo:
 
 ###### electron/src/preload.js 
-	Utilize para tornar a API do Electron acessível ao React.<br>
+	Utilize para tornar a API do Electron acessível ao React.
     Por padrão, esse script define o objeto global "app" disponível e testável através do Console do Electron.
 ###### electron/src/ipc.js
-	Esse arquivo gerencia os eventos que serão ouvidos após a invocação dos métodos no aplicativo React.<br>Utilize-o para chamar métodos responsáveis pelo armazenamento de dados.
+	Esse arquivo gerencia os eventos que serão ouvidos após a invocação dos métodos no aplicativo React.
+    Utilize-o para chamar métodos responsáveis pelo armazenamento de dados.
 ###### electron/src/storage.js **(opcional)**
-	Esse arquivo é opcional e pode ser usado para armazenar os métodos que gerenciarão o armazenamento de dados da aplicação Desktop.
+	Esse arquivo é opcional e pode ser usado para armazenar os métodos que 
+    gerenciarão o armazenamento de dados da aplicação Desktop.
