@@ -1,29 +1,23 @@
 const { ipcMain } = require("electron")
+const storage = require('./storage')
 
-function HandleIPCs() {
+function HandleIPCs () {
     ipcMain.handle("app.storeData", (event, key, value) => {
-        //TODO
-
-        return false;
-    });
+        storage.saveData(key, value)
+        return false
+    })
 
     ipcMain.handle("app.deleteData", (event, key, value) => {
-        //TODO
-
-        return false;
-    });
+        return storage.deleteData(key)
+    })
 
     ipcMain.handle("app.getData", (event, key, value) => {
-        //TODO
-
-        return false;
-    });
+        return storage.getData()
+    })
 
     ipcMain.handle("app.hasData", (event, key, value) => {
-        //TODO
-
-        return false;
-    });
+        return storage.updateData(key, value)
+    })
 }
 
 module.exports = {
